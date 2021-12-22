@@ -1,0 +1,78 @@
+
+body{
+    background-color: rgb(247, 238, 205);
+}
+
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    
+   
+}
+
+
+
+.flex-container > div {
+    background-color: #f1f1f1;
+    margin: 1px;
+    padding: 1px;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+}
+
+#time{
+    margin: 1px;
+    padding: 15px;
+    text-align: center;
+    font-size: 30px;
+    width: 5px;
+    height: 5px;
+    
+
+}
+
+button{
+    border-radius: 12px;
+    display: inline-block;
+    border: 2px solid #91858c0a;
+    margin: 4px 2px;
+    padding: 5px;
+}
+
+
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (max-width : 768px)
+{
+    body{
+        background-color: lavender;
+    }
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width:500px){
+    body{
+        background-color: lightcoral;
+    }
+    
+}
+
+.x{
+    background-image: url(x.jpg);
+    background-size: cover;
+}
+
+.o{
+    background-image: url(o.jpg);
+    background-size: cover;
+}
+
+#xo{
+    width: 186px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
