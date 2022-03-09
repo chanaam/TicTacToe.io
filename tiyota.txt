@@ -1,0 +1,66 @@
+/*דקה 60000 שנייה -1000ק*/
+/*set interval-מפעיל פונקציה שוב ושוב ולאחר מרווח זמן  */
+
+/*function displayStatusGame() {
+    arrDiv.forEach((i, index) => {
+        if (board[index].value != "") {
+            console.log("hy");
+            if (board[index].value == "x")
+                i.setAttribute("style", " background-image: url(x.JPG);")
+            else
+                i.setAttribute("style", " background-image: url(o.jpg);")
+        } else
+            i.innerHTML = board[index].value;
+
+    })
+
+}*/
+
+
+/*function validation(index) {
+    if (indexStep.length >= board.length) {
+        alert("game over");
+        stopCount();
+        return false;
+    }
+    if (board[index].value != "") {
+        alert("The square is full");
+        return false;
+    } else
+        return true;
+
+}*/
+
+
+/*function displayBord(num) {
+    for (i = 0; i < num; i++) {
+        xo.innerHTML += `<div id="line${i}" class="flex-container">`;
+        for (j = 0; j < num; j++) {
+            document.getElementById(i).innerHTML += `<div id="box${i}${j}"></div>`;
+            board.push(square(i, j));
+        }
+        xo.innerHTML += `</div>`;
+    }
+
+}*/
+
+/*function square(x, y, value = "") {
+
+    return {
+        x,
+        y,
+        value
+    }
+};*/
+
+//let arrDiv = [];
+
+// displayBord(num);
+//arrDiv = document.querySelectorAll(".flex-container > div")
+// console.log(board);
+
+
+ /* console.log(arrDiv);
+     arrDiv.forEach((i, index) => {
+         i.addEventListener
+     })*/

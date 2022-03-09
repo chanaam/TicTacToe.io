@@ -26,6 +26,15 @@ let players = [p1, p2];
 
 let currentPlayer = p1;
 
+//time:
+var second = 0;
+var idTime;
+var minute=0;
+var timer_is_on = 0;
+
+//confity
+
+
 
 function player(name, shape, style, record,win) {
     return {
@@ -68,21 +77,10 @@ function createBoard(num) {
     }
 }
 
-function createDesign(){
-
-    //for(i=0;i<3;i++)
-    //{
-
-
-    //}
-}
-
-
 function startGame() {
 
     stopCount();
 
-    //document.getElementById('xo').addEventListener("click", doClick);
     for(i=0;i<defult*defult;i++)
         document.getElementById(`box${i}`).addEventListener("click",doClick);
 
@@ -115,12 +113,28 @@ function doClick(e) {
 
 function winner()
 {
-    alert(currentPlayer.name + ` is the winner`);
+
+    win.innerText =`${currentPlayer.name} the winner`;
+
+    const start = () => {
+        setTimeout(function() {
+            confetti.start()
+        }, 100); 
+    };
+    const stop = () => {
+        setTimeout(function() {
+            confetti.stop()
+        }, 6000);
+    };
+    start();
+    stop();  
+
     recordCalculation();
     currentPlayer.win++;
     document.getElementById("players").innerText=`${p1.name}:  ${p1.win} |  ${p2.name}:  ${p2.win}`;
 
 }
+
 
 function recordCalculation() {
 
@@ -254,11 +268,6 @@ function deleteLastStep() {
 
 }
 
-var second = 0;
-var idTime;
-var minute=0;
-var timer_is_on = 0;
-
 function startCount()
 {
     if (!timer_is_on) 
@@ -277,7 +286,7 @@ function timedCount()
         second=0;
         minute=minute+1;
     }
-    idTime = setTimeout(timedCount, 1000); //מפעיל פונקציה פעם אחת לאחר מרווח זמן
+    idTime = setTimeout(timedCount, 1000); //activates a function once after a time interval
 }
 
 
@@ -289,71 +298,3 @@ function stopCount() {
     timer_is_on = 0;
     time.innerText = "";
 }
-
-
-/*דקה 60000 שנייה -1000ק*/
-/*set interval-מפעיל פונקציה שוב ושוב ולאחר מרווח זמן  */
-
-/*function displayStatusGame() {
-    arrDiv.forEach((i, index) => {
-        if (board[index].value != "") {
-            console.log("hy");
-            if (board[index].value == "x")
-                i.setAttribute("style", " background-image: url(x.JPG);")
-            else
-                i.setAttribute("style", " background-image: url(o.jpg);")
-        } else
-            i.innerHTML = board[index].value;
-
-    })
-
-}*/
-
-
-/*function validation(index) {
-    if (indexStep.length >= board.length) {
-        alert("game over");
-        stopCount();
-        return false;
-    }
-    if (board[index].value != "") {
-        alert("The square is full");
-        return false;
-    } else
-        return true;
-
-}*/
-
-
-/*function displayBord(num) {
-    for (i = 0; i < num; i++) {
-        xo.innerHTML += `<div id="line${i}" class="flex-container">`;
-        for (j = 0; j < num; j++) {
-            document.getElementById(i).innerHTML += `<div id="box${i}${j}"></div>`;
-            board.push(square(i, j));
-        }
-        xo.innerHTML += `</div>`;
-    }
-
-}*/
-
-/*function square(x, y, value = "") {
-
-    return {
-        x,
-        y,
-        value
-    }
-};*/
-
-//let arrDiv = [];
-
-// displayBord(num);
-//arrDiv = document.querySelectorAll(".flex-container > div")
-// console.log(board);
-
-
- /* console.log(arrDiv);
-     arrDiv.forEach((i, index) => {
-         i.addEventListener
-     })*/

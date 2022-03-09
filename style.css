@@ -7,6 +7,10 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  .hidden {
+    display: none;
+  }
   
   :root {
     --main-bg-color: #23272a;
@@ -39,7 +43,7 @@ body{
   }
 
   .header {
-    padding: 20px;
+    padding:20px;
   }
 
   h1 {
@@ -66,8 +70,8 @@ body{
 
 .flex-container > div {
     background-color:  var(--white);
-    margin: 1px;
-    padding: 1px;
+    margin: 2px;
+    padding: 2px;
     font-size: 30px;
     width: 60px;
     height: 60px;
@@ -97,7 +101,8 @@ button:hover {
   }
 
 .time,
-.show{
+.show,
+.win{
     color: var(--white);
     font-family: var(--secondary-font-family);
     font-size: 1.7em;
